@@ -163,6 +163,42 @@ main { max-width: 46rem; margin: 0 auto; padding: 3rem 2.5rem 2rem; }
 }
 .filter button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
 
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid var(--rule);
+  border-radius: 0.4rem;
+}
+.field label { display: block; margin-bottom: 0.25rem; font-size: 0.95rem; }
+.field-wide { grid-column: 1 / -1; }
+.field input, .field textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--muted);
+  border-radius: 0.25rem;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+}
+.field textarea { resize: vertical; }
+.field input:focus-visible, .field textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.trap { position: absolute; left: -9999px; }
+.form-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; }
+.form-foot button {
+  padding: 0.45rem 1.1rem;
+  border: 1px solid var(--accent);
+  border-radius: 0.25rem;
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  cursor: pointer;
+}
+.form-foot button:disabled { border-color: var(--rule); color: var(--muted); cursor: not-allowed; }
+.form-note { color: var(--muted); font-size: 0.9rem; }
+
 footer { max-width: 46rem; margin: 0 auto; padding: 1rem 2.5rem 2.5rem; color: var(--muted); font-size: 0.9rem; }
 
 /* Phones and small tablets: the sidebar becomes a top bar with a menu */
@@ -193,4 +229,5 @@ footer { max-width: 46rem; margin: 0 auto; padding: 1rem 2.5rem 2.5rem; color: v
   footer { padding: 1rem 16px 2rem; }
   .lede { font-size: 1.2rem; }
   .dated li { grid-template-columns: 1fr; }
+  .contact-form { grid-template-columns: 1fr; padding: 1rem; }
 }

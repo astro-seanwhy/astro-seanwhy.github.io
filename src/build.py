@@ -15,6 +15,10 @@ HOME_DESC = (
     "University of Copenhagen, studying how planetary systems form and evolve."
 )
 
+## ID of the Contact form from the Formspree dashboard (the end of formspree.io/f/...).
+## While empty, the form shows but cannot send.
+FORMSPREE_ID = ""
+
 ## Top-level navigation: (label, path)
 NAV = [
     ("Home", "index.html"),
@@ -124,6 +128,22 @@ def render_talks(talks):
     return "\n".join(parts)
 
 
+###---- Contact form ----###
+
+def form_values():
+    if FORMSPREE_ID:
+        return {
+            "form_action": f' action="https://formspree.io/f/{esc(FORMSPREE_ID)}"',
+            "form_disabled": "",
+            "form_note": "Messages are delivered through Formspree, a third-party form service.",
+        }
+    return {
+        "form_action": "",
+        "form_disabled": " disabled",
+        "form_note": "This form is not connected yet, so it cannot send messages.",
+    }
+
+
 ###---- Page assembly ----###
 
 def relative_root(path):
@@ -144,6 +164,8 @@ def render_page(template, out, title, fragment, nav_label, pubs, talks):
     main = main.replace("{{publications}}", render_publications(pubs))
     main = main.replace("{{talks}}", render_talks(talks))
     main = re.sub(r"\{\{related:(\w+)\}\}", lambda m: render_related(pubs, m.group(1)), main)
+    for key, value in form_values().items():
+        main = main.replace("{{" + key + "}}", value)
     is_home = title is None
     values = {
         "title": esc(SITE_NAME if is_home else f"{title} | {SITE_NAME}"),
