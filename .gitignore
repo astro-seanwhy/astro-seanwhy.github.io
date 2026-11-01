@@ -1,0 +1,7 @@
+.DS_Store
+.claude/
+
+# Private source documents and original images; the site uses the copies in assets/
+*.pdf
+theme.png
+myportrait.jpg

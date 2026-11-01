@@ -1,0 +1,78 @@
+# Invited talks and seminars. After a change, run: python3 src/build.py
+# Add  url = "https://..."  to any entry to link its recording.
+
+[[talk]]
+year = 2026
+kind = "Invited talk"
+event = "From Envelopes to Atmospheres"
+place = "Copenhagen, Denmark"
+
+[[talk]]
+year = 2026
+kind = "Invited review talk"
+event = "Galaxies to Planets: an Elemental Journey"
+place = "Ringberg Castle, Germany"
+
+[[talk]]
+year = 2025
+kind = "Invited review talk"
+event = "Exoplanets and Planet Formation"
+place = "Shanghai, China"
+
+[[talk]]
+year = 2025
+kind = "Invited talk"
+event = "Europlanet Science Congress, session ExoA16"
+place = "Helsinki, Finland"
+
+[[talk]]
+year = 2025
+kind = "Invited seminar"
+event = "Institut de Physique du Globe de Paris, Origins Seminar"
+place = "France"
+
+[[talk]]
+year = 2025
+kind = "Invited review talk"
+event = "2nd International Conference of Deep Space Sciences"
+place = "Hefei, China"
+
+[[talk]]
+year = 2025
+kind = "Invited seminar"
+event = "University of Oxford, AOPP Seminar Series"
+place = "UK"
+
+[[talk]]
+year = 2025
+kind = "Invited seminar"
+event = "University of Cambridge, ExoCam Seminar Series"
+place = "UK"
+
+[[talk]]
+year = 2024
+kind = "Invited seminar"
+event = "IAU Commission G5 Seminar Series"
+
+[[talk]]
+year = 2023
+kind = "Invited seminar"
+event = "Earth 2.0 (ET) Science Seminar Series"
+
+[[talk]]
+year = 2022
+kind = "Invited review talk"
+event = "Lorentz Center workshop Diversity of Rocky Planets"
+place = "Leiden, The Netherlands"
+
+[[talk]]
+year = 2021
+kind = "Invited seminar"
+event = "University of Cambridge, White Dwarf Group Seminar Series"
+place = "UK"
+
+[[talk]]
+year = 2020
+kind = "Invited seminar"
+event = "University of Bern, Center for Space and Habitability"
+place = "Switzerland"

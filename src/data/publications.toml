@@ -1,0 +1,329 @@
+# The one place to edit the publication list. After a change, run: python3 src/build.py
+#
+# Fields:
+#   section   research | geophysics | patent | software | proposal
+#   authors   Written "H. S. Wang, A. Johansen, ..."; your name is bolded and the
+#             first-author filter is worked out from this field automatically.
+#   year, title, venue
+#   doi, arxiv, url   Optional links. Add whichever exists; leave out the others.
+#   selected  Optional. true marks the paper as selected.
+#   themes    Optional. volatile | interiors lists the paper on that research page.
+#   year_label  Optional. Shown instead of the year.
+
+###---- Selected papers ----###
+
+[[pub]]
+section = "research"
+authors = "H. S. Wang, A. Johansen, Z. Xu, M.-L. Steinmeyer, M. Lambrechts, E. van Kooten, C.-C. Yang, Z. Zhu, D. S. Lauretta, M. Bizzarro"
+year = 2026
+title = "Volatile depletion in rocky planets as a chemical fingerprint of hybrid accretion"
+venue = "Nature Astronomy"
+doi = "10.1038/s41550-026-02984-6"
+selected = true
+themes = ["volatile"]
+
+[[pub]]
+section = "research"
+authors = "U. Zaveri, H. S. Wang, P. A. Sossi"
+year = 2026
+title = "A chemical perspective on planet formation in reduced systems"
+venue = "Astronomy & Astrophysics, 709, A223"
+doi = "10.1051/0004-6361/202558126"
+selected = true
+themes = ["volatile"]
+
+[[pub]]
+section = "research"
+authors = "H. S. Wang, S. P. Quanz, S. Mahadevan, M. Deal"
+year = 2024
+title = "Towards characterising rocky worlds: Trends in chemical make-ups of M dwarfs versus GK dwarfs"
+venue = "Astronomy & Astrophysics, 688, A225"
+doi = "10.1051/0004-6361/202449467"
+selected = true
+themes = ["volatile"]
+
+[[pub]]
+section = "research"
+authors = "R. J. Spaargaren, H. S. Wang, S. J. Mojzsis, M. D. Ballmer, P. J. Tackley"
+year = 2023
+title = "Plausible constraints on the range of bulk terrestrial exoplanet compositions in the solar neighbourhood"
+venue = "The Astrophysical Journal, 948, 53"
+doi = "10.3847/1538-4357/acac7d"
+selected = true
+themes = ["volatile"]
+
+[[pub]]
+section = "research"
+authors = "H. S. Wang, C. H. Lineweaver, S. P. Quanz, S. J. Mojzsis, T. R. Ireland, P. A. Sossi, F. Seidler, T. Morel"
+year = 2022
+title = "A model Earth-sized planet in the habitable zone of α Centauri A/B"
+venue = "The Astrophysical Journal, 927, 134"
+doi = "10.3847/1538-4357/ac4e8c"
+selected = true
+themes = ["interiors"]
+
+[[pub]]
+section = "research"
+authors = "H. S. Wang, S. P. Quanz, D. Yong, F. Liu, F. Seidler, L. Acuña, S. J. Mojzsis"
+year = 2022
+title = "Detailed chemical compositions of planet-hosting stars II: exploration of the interiors of terrestrial-type exoplanets"
+venue = "Monthly Notices of the Royal Astronomical Society, 513, 5829–5846"
+doi = "10.1093/mnras/stac1119"
+selected = true
+themes = ["interiors"]
+
+[[pub]]
+section = "research"
+authors = "H. S. Wang, T. Morel, S. P. Quanz, S. J. Mojzsis"
+year = 2020
+title = "Europium as a lodestar: diagnosis of radiogenic heat production in terrestrial exoplanets"
+venue = "Astronomy & Astrophysics, 644, A19"
+doi = "10.1051/0004-6361/202038386"
+selected = true
+themes = ["interiors"]
+
+[[pub]]
+section = "research"
+authors = "H. S. Wang, F. Liu, T. R. Ireland, R. Brasser, D. Yong, C. H. Lineweaver"
+year = 2019
+title = "Enhanced constraints on the interior composition and structure of terrestrial exoplanets"
+venue = "Monthly Notices of the Royal Astronomical Society, 482, 2222–2233"
+doi = "10.1093/mnras/sty2749"
+selected = true
+themes = ["interiors"]
+
+[[pub]]
+section = "research"
+authors = "H. S. Wang, C. H. Lineweaver, T. R. Ireland"
+year = 2019
+title = "The volatility trend of protosolar and terrestrial elemental abundances"
+venue = "Icarus, 328, 287–305"
+doi = "10.1016/j.icarus.2019.03.018"
+selected = true
+themes = ["volatile"]
+
+[[pub]]
+section = "research"
+authors = "H. S. Wang, C. H. Lineweaver, T. R. Ireland"
+year = 2018
+title = "The elemental abundances (with uncertainties) of the most Earth-like planet"
+venue = "Icarus, 299, 460–474"
+doi = "10.1016/j.icarus.2017.08.024"
+selected = true
+themes = ["volatile"]
+
+###---- Other planetary science and exoplanet papers ----###
+
+[[pub]]
+section = "research"
+authors = "M. Sastre, T. Lichtenberg, L. Dang, A. Piette, H. S. Wang, M. López-Morales, et al."
+year = 2026
+title = "Thermal Evolution of Lava Planets Across System Ages: Predictions for Hell of a Survey"
+venue = "arXiv:2609.20155"
+arxiv = "2609.20155"
+
+[[pub]]
+section = "research"
+authors = "Z. Cheng, S. X. Wang, F. Liu, H. Wang, Q. Sun, J. Buchner, M. Babatsikos, H. Chen, J. Zhang, Y.-S. Ting, Z. Guo, A. Dotter, S. M. Saad, J. Osses"
+year = 2026
+title = "A Bayesian Search for Planet Engulfment Signatures in Solar Analogs"
+venue = "arXiv:2607.03504"
+arxiv = "2607.03504"
+
+[[pub]]
+section = "research"
+authors = "Y. Duann, A. Johansen, H. S. Wang, H. J. Hoeijmakers"
+year = 2026
+title = "Machine-learning clustering of close-in exoplanet populations: links to pebble accretion"
+venue = "Astronomy & Astrophysics, 711, A238"
+
+[[pub]]
+section = "research"
+authors = "X. Byrne, C. M. Guimond, A. Bonsor, H. S. Wang, S. R. Vaughan, J. G. Rogers"
+year = 2026
+title = "The Barnard’s Star planetary system: stability, composition, and evolution of four sub-Earth exoplanets"
+venue = "Monthly Notices of the Royal Astronomical Society, 550, stag1207"
+
+## NOTE: the CV has "Benz, W. e," after the book title, which looks cut off, so it is left out here.
+[[pub]]
+section = "research"
+authors = "L. Parc, J. Venturini, F. Bouchy, R. Helled, C. Dorn, A. Leleu, Y. Alibert, S. Müller, H. Wang"
+year = 2026
+title = "Origin and characterization of super-Earths and sub-Neptunes"
+venue = "The NCCR PlanetS Legacy Book; arXiv:2604.11779"
+arxiv = "2604.11779"
+
+[[pub]]
+section = "research"
+authors = "H. Kühnle, E. C. Matthews, P. Mollière, P. Patapis, Z. Zhang, E. Nasedkin, D. Gasman, N. Whiteford, H. S. Wang, M. Ravet, G. Chauvin, M. Bonnefoy, D. Barrado, A. M. Glauser, S. P. Quanz"
+year = 2026
+title = "Oxygen and nitrogen isotopologs on cold COCONUTS-2b observed with MIRI/MRS"
+venue = "Astronomy & Astrophysics, 710, A355"
+
+[[pub]]
+section = "research"
+authors = "R. Zhang, J.-W. Xie, M. Pan, B. Liu, J.-L. Zhou, J. Wang, H. S. Wang, Y. Zhang"
+year = 2026
+title = "Chemical Abundances Shape History (CASH). I. A Link between Giant Planets’ Orbital Periods and Host Stellar C/O Ratios"
+venue = "The Astronomical Journal, 171, 302"
+
+[[pub]]
+section = "research"
+authors = "T. C. L. Trueman, H. S. Wang, S. J. Mojzsis, D. Turrini, K. Heng, M. Pignatari"
+year = 2026
+title = "Reconciliation of M Dwarf and FGK Stellar Abundances with Galactic Chemical Evolution"
+venue = "The Astrophysical Journal, 1005, 205"
+
+[[pub]]
+section = "research"
+authors = "R. J. Spaargaren, O. Herbort, H. S. Wang, S. J. Mojzsis, P. Sossi"
+year = 2025
+title = "Proto-planetary disk composition-dependent element volatility in the context of rocky planet formation"
+venue = "Astronomy & Astrophysics, 703, A218"
+themes = ["volatile"]
+
+[[pub]]
+section = "research"
+authors = "T. Olander, M. R. Gent, U. Heiter, O. Kochukhov, M. Bergemann, E. Magg, S. Cassisi, M. Kovalev, T. Morel, N. J. Miller, D. Souto, Y. Shan, B. Rojas-Ayala, E. Delgado-Mena, H. S. Wang"
+year = 2025
+title = "Performance of the Stellar Abundances and atmospheric Parameters Pipeline adapted for M dwarfs-I. Atmospheric parameters from the spectroscopic module"
+venue = "Astronomy & Astrophysics, 696, A62"
+
+[[pub]]
+section = "research"
+authors = "H. Rauer, C. Aerts, J. Cabrera, et al. (incl. H. S. Wang)"
+year = 2025
+title = "The PLATO mission"
+venue = "Experimental Astronomy, 59, 26"
+
+[[pub]]
+section = "research"
+authors = "L. Cesario, T. Lichtenberg, E. Alei, Ó. Carrión-González, F. A. Dannert, et al. (incl. H. S. Wang)"
+year = 2024
+title = "Large Interferometer For Exoplanets (LIFE) XIV. Finding terrestrial protoplanets in the galactic neighborhood"
+venue = "Astronomy & Astrophysics, 692, A172"
+
+[[pub]]
+section = "research"
+authors = "A. M. Glauser, S. P. Quanz, et al. (incl. H. S. Wang)"
+year = 2024
+title = "The Large Interferometer For Exoplanets (LIFE): A space mission for mid-infrared nulling interferometry"
+venue = "SPIE Optical and Infrared Interferometry and Imaging IX, 13095, 354–374"
+
+## NOTE: the CV has "B S Kon- rad", read here as a line-break artifact for "Konrad".
+[[pub]]
+section = "research"
+authors = "D. Angerhausen, M. Ottiger, F. Dannert, Y. Miguel, C. Sousa-Silva, J. Kammerer, F. Menti, E. Alei, B. S. Konrad, H. S. Wang, S. P. Quanz"
+year = 2023
+title = "Large Interferometer For Exoplanets (LIFE): VIII. Where is the phosphine? Observing exoplanetary PH3 with a space based MIR nulling interferometer"
+venue = "Astrobiology, 23, 183–184"
+
+[[pub]]
+section = "research"
+authors = "S. P. Quanz, M. Ottiger, E. Fontanet, J. Kammerer, et al. (incl. H. S. Wang)"
+year = 2022
+title = "Large Interferometer For Exoplanets (LIFE)"
+venue = "Astronomy & Astrophysics, 664, A21"
+
+[[pub]]
+section = "research"
+authors = "F. Liu, D. Yong, M. Asplund, H. S. Wang, L. Spina, L. Acuña, J. Melendez, I. Ramirez"
+year = 2020
+title = "Detailed chemical compositions of planet-hosting stars – I. Exploration of possible planet signatures"
+venue = "Monthly Notices of the Royal Astronomical Society, 495, 3961–3973"
+
+[[pub]]
+section = "research"
+authors = "H. Wang, C. Lineweaver"
+year = 2016
+title = "Chemical complementarity between the gas phase of the interstellar medium and the rocky material of our planetary system"
+venue = "Proc. 15th Australian Space Research Conference, 15, 173–182"
+arxiv = "1605.05003"
+
+###---- Earlier work in geophysics ----###
+
+[[pub]]
+section = "geophysics"
+authors = "H. Wang, S. Z. Sun, D. Wang, J. Han, B. Jing"
+year = 2012
+title = "Frequency-dependent velocity prediction theory with implication for better reservoir fluid prediction"
+venue = "The Leading Edge, 31, 160–166"
+
+[[pub]]
+section = "geophysics"
+authors = "H. Wang, S. Z. Sun, M. Chapman"
+year = 2012
+title = "Velocity dispersion and attenuation of seismic wave propagation in rocks"
+venue = "Acta Petrolei Sinica, 33, 332–342"
+
+[[pub]]
+section = "geophysics"
+authors = "S. Z. Sun, H. Wang, Z. Liu, Y. Li, X. Zhou, Z. Wang"
+year = 2012
+title = "The theory and application of DEM-Gassmann rock physics model for complex carbonate reservoirs"
+venue = "The Leading Edge, 31, 152–158"
+
+[[pub]]
+section = "geophysics"
+authors = "H. Wang, S. Z. Sun, H. Yang, H. Gao, Y. Xiao, H. Hu"
+year = 2011
+title = "The influence of pore structure on P- & S-wave velocities in complex carbonate reservoirs with secondary storage space"
+venue = "Petroleum Science, 8, 394–405"
+
+[[pub]]
+section = "geophysics"
+authors = "Y. Zhang, S. Z. Sun, H. Yang, H. Wang, J. Han, H. Gao, C. Luo, B. Jing"
+year = 2011
+title = "Pre-stack inversion for caved carbonate reservoir prediction: A case study from Tarim Basin, China"
+venue = "Petroleum Science, 8, 415–421"
+
+[[pub]]
+section = "geophysics"
+authors = "H. Yang, S. Z. Sun, L. Cai, Y. Xiao, H. Wang, C. Luo, H. Hu"
+year = 2011
+title = "A new method of formation evaluation for fractured and caved carbonate reservoirs: A case study from the Lundong area, Tarim Basin, China"
+venue = "Petroleum Science, 8, 446–454"
+
+###---- Patents ----###
+
+[[pub]]
+section = "patent"
+authors = "H. Wang, Z. Sun"
+year = 2013
+title = "Full-frequency band velocity prediction model related to pore structure"
+venue = "Patent, State Intellectual Property Office of China, Appl. No. CN 201010506921, Publ. No. CN102445709B"
+
+[[pub]]
+section = "patent"
+authors = "Z. Sun, H. Wang"
+year = 2013
+title = "Rich argillaceous sand stone three-dimension equivalent speed prediction model"
+venue = "Patent, State Intellectual Property Office of China, Appl. No. CN 201010506914, Publ. No. CN102445708B"
+
+###---- Software ----###
+
+[[pub]]
+section = "software"
+authors = "H. S. Wang"
+year = 2026
+year_label = "2022–2026"
+title = "ExoInt: Devolatilization and interior modeling package for rocky planets"
+venue = "Astrophysics Source Code Library, ascl:2504.019"
+url = "https://ascl.net/2504.019"
+themes = ["interiors"]
+
+###---- Granted observing proposals ----###
+
+[[pub]]
+section = "proposal"
+authors = "L. Dang (PI) and 34 Co-Is (incl. H. S. Wang)"
+year = 2025
+title = "Surveying hellish worlds: Lava planets as time capsules of thermal evolution"
+venue = "JWST Proposal, Cycle 4, id. 8864"
+
+[[pub]]
+section = "proposal"
+authors = "P. A. Patapis (PI) and 8 Co-Is (incl. H. S. Wang)"
+year = 2024
+title = "Testing a new formation tracer for cold gas giant planets with JWST/MIRI"
+venue = "JWST Proposal, Cycle 3, id. 6463"
