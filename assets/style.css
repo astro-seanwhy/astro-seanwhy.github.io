@@ -66,7 +66,7 @@ h2 { font-size: 1.35rem; margin: 2.75rem 0 1rem; padding-bottom: 0.35rem; border
 /* Sidebar */
 .sidebar {
   position: fixed;
-  inset: 0 auto 0 0;
+  inset: 0 0 0 auto;
   display: flex;
   flex-direction: column;
   width: var(--sidebar-width);
@@ -112,7 +112,7 @@ h2 { font-size: 1.35rem; margin: 2.75rem 0 1rem; padding-bottom: 0.35rem; border
 .menu-button { display: none; }
 
 /* Main column */
-.column { margin-left: var(--sidebar-width); }
+.column { margin-right: var(--sidebar-width); }
 
 .banner { display: block; width: 100%; object-fit: cover; object-position: center; }
 .banner-home { height: clamp(10rem, 24vw, 19rem); }
@@ -188,7 +188,7 @@ footer { max-width: 46rem; margin: 0 auto; padding: 1rem 2.5rem 2.5rem; color: v
   }
   .js .sidebar:not(.open) .sidebar-menu { display: none; }
 
-  .column { margin-left: 0; }
+  .column { margin-right: 0; }
   main { padding: 2rem 16px 1.5rem; }
   footer { padding: 1rem 16px 2rem; }
   .lede { font-size: 1.2rem; }

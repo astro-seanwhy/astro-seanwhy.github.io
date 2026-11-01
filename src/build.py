@@ -30,7 +30,6 @@ PAGES = [
     ("research/index.html", "Research", "research.html", "Research"),
     ("research/volatile-depletion/index.html", "Volatile Depletion and the Star–Planet Chemical Connection", "volatile-depletion.html", "Research"),
     ("research/rocky-exoplanet-interiors/index.html", "Interior and Atmospheric Modeling of Rocky Exoplanets", "rocky-exoplanet-interiors.html", "Research"),
-    ("research/compositional-exoplanetology/index.html", "Compositional Exoplanetology of Rocky Worlds", "compositional-exoplanetology.html", "Research"),
     ("publications/index.html", "Publications", "publications.html", "Publications"),
     ("talks/index.html", "Talks", "talks.html", "Talks"),
     ("cv/index.html", "CV", "cv.html", "CV"),
