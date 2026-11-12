@@ -138,6 +138,14 @@ def render_featured(pubs):
     return "\n".join(parts)
 
 
+def result_id(pub):
+    ## Link target of a paper on the Latest results page, e.g. #wang-2026-hybrid-accretion:
+    ## the name of its figure file, or else a short form of its title
+    if "figure" in pub:
+        return Path(pub["figure"]).stem
+    return "-".join(re.findall(r"[a-z0-9]+", pub["title"].lower())[:6])
+
+
 def render_latest(pubs, year):
     ## One block per research paper of the year, each with a figure from the paper
     parts = []
@@ -159,7 +167,7 @@ def render_latest(pubs, year):
                 f'<figcaption>{esc(pub["figure_note"])}</figcaption></figure>'
             )
         parts.append(
-            f'<article class="result">{figure}<div><h2>{title}</h2>'
+            f'<article class="result" id="{esc(result_id(pub))}">{figure}<div><h2>{title}</h2>'
             f'<p class="pub-authors">{authors}</p><p class="pub-venue">{meta}</p>'
             f'<p>{esc(pub.get("summary", ""))}</p></div></article>'
         )
