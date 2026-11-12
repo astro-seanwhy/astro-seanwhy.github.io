@@ -20,10 +20,14 @@ if (filter) {
   const buttons = filter.querySelectorAll('button');
   const show = (name) => {
     buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.filter === name)));
-    document.querySelectorAll('.pub-section').forEach((section) => {
+    // "Themes" swaps to the list grouped by theme; the other buttons filter the full list
+    document.querySelectorAll('.pub-view').forEach((view) => {
+      view.hidden = (view.dataset.view === 'themes') !== (name === 'themes');
+    });
+    document.querySelectorAll('.pub-view[data-view="all"] .pub-section').forEach((section) => {
       let visible = 0;
       section.querySelectorAll('.pub').forEach((pub) => {
-        const match = name === 'all' || pub.dataset[name] === 'true';
+        const match = name !== 'first' || pub.dataset.first === 'true';
         pub.hidden = !match;
         if (match) visible += 1;
       });

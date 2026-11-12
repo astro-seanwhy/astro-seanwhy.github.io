@@ -1,0 +1,19 @@
+# Short items for the "Latest" list on the home page, newest first.
+# After a change, run: python3 src/build.py
+# "text" may contain simple HTML such as <em> and <a href="...">.
+
+[[news]]
+date = "2026"
+text = 'Organizer of the <em>From Envelopes to Atmospheres</em> workshop in Copenhagen.'
+
+[[news]]
+date = "2026"
+text = 'New paper in <em>Astronomy &amp; Astrophysics</em>: <a href="https://doi.org/10.1051/0004-6361/202558126">A chemical perspective on planet formation in reduced systems</a>.'
+
+[[news]]
+date = "2025"
+text = 'Joined the PLATO Core Science Team.'
+
+[[news]]
+date = "2025"
+text = 'ExoInt registered in the <a href="https://ascl.net/2504.019">Astrophysics Source Code Library</a>.'

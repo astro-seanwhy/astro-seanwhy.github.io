@@ -5,7 +5,7 @@
   --muted: #565b66;
   --rule: #e2dfd8;
   --accent: #a84a08;
-  --tag-bg: #f8e9da;
+  --card: #ffffff;
   --sidebar-bg: #171b2b;
   --sidebar-text: #eceae4;
   --sidebar-muted: #b8bccb;
@@ -20,7 +20,7 @@
     --muted: #aeb2bd;
     --rule: #2d3242;
     --accent: #f2a65a;
-    --tag-bg: #3a2a1c;
+    --card: #181c29;
     --sidebar-bg: #0c0f18;
   }
 }
@@ -42,6 +42,7 @@ a { color: var(--accent); text-underline-offset: 0.15em; }
 a:focus-visible, button:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
 
 h1, h2 { font-weight: 500; line-height: 1.25; }
+h3 { margin: 0; font-size: 1.2rem; font-weight: 600; line-height: 1.3; }
 h1 { font-size: 1.9rem; margin: 0 0 1.25rem; }
 h2 { font-size: 1.35rem; margin: 2.75rem 0 1rem; padding-bottom: 0.35rem; border-bottom: 1px solid var(--rule); }
 
@@ -115,20 +116,71 @@ h2 { font-size: 1.35rem; margin: 2.75rem 0 1rem; padding-bottom: 0.35rem; border
 .column { margin-right: var(--sidebar-width); }
 
 .banner { display: block; width: 100%; object-fit: cover; object-position: center; }
-.banner-home { height: clamp(10rem, 24vw, 19rem); }
+.banner-home { height: clamp(8rem, 17vw, 13rem); }
 .banner-inner { height: clamp(5rem, 9vw, 7.5rem); }
 
 main { max-width: 46rem; margin: 0 auto; padding: 3rem 2.5rem 2rem; }
+.wide main, .wide footer { max-width: 62rem; }
 
 .home-name { margin: 0 0 0.75rem; font-size: 2.6rem; line-height: 1.15; }
+.home-role { display: none; margin: -0.25rem 0 0.75rem; font-size: 0.95rem; }
 .lede { margin: 0 0 1.75rem; color: var(--muted); font-size: 1.35rem; line-height: 1.45; }
+.wide main > p { max-width: 44rem; }
+.subtitle { margin: -0.75rem 0 1.25rem; color: var(--accent); font-size: 1.2rem; }
 .crumb { margin: 0 0 0.5rem; font-size: 0.95rem; }
 .crumb a::before { content: "← "; }
 
-.themes { margin: 0; padding: 0; list-style: none; }
-.themes li { margin-bottom: 1.25rem; }
-.themes a { font-size: 1.1rem; }
-.themes p { margin: 0.2rem 0 0; color: var(--muted); }
+/* Home: key facts, featured result and theme cards */
+.eyebrow, .facts dt { color: var(--accent); font-size: 0.95rem; font-variant-caps: all-small-caps; letter-spacing: 0.05em; }
+.eyebrow { margin: 0; }
+
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: 1rem 1.5rem; margin: 0 0 2.25rem; padding: 1.1rem 0; border-block: 1px solid var(--rule); }
+.facts dd { margin: 0; font-size: 0.95rem; line-height: 1.45; }
+
+.feature, .card { border: 1px solid var(--rule); border-radius: 0.5rem; background: var(--card); }
+.feature { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem 2rem; align-items: center; margin: 2rem 0; padding: 1.5rem; }
+.feature h2 { margin: 0.1rem 0 0.6rem; padding: 0; border: 0; font-size: 1.5rem; }
+.feature p { margin: 0 0 0.75rem; }
+.feature p:last-child { margin-bottom: 0; }
+.more { font-weight: 600; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.5rem; }
+.card { padding: 1rem 1rem 1.1rem; }
+.card-link { display: block; color: var(--accent); text-decoration: none; }
+/* The theme figures differ in shape, so each sits in a frame of one shape and the titles line up */
+.card-link img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: contain; margin-bottom: 0.9rem; border-radius: 0.3rem; background: #0a0c14; }
+.card-link:hover h3 { text-decoration: underline; }
+.card-sub { margin: 0.2rem 0 0; color: var(--muted); font-size: 0.95rem; }
+
+.fig-theme { margin: 1.75rem 0 0; }
+.fig-theme img { display: block; max-width: 100%; max-height: 26rem; margin: 0 auto; border-radius: 0.4rem; }
+
+/* Latest results: one figure and one sentence for each paper */
+.result { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 1rem 2rem; align-items: start; padding: 1.75rem 0; border-top: 1px solid var(--rule); }
+.result h2 { margin: 0 0 0.4rem; padding: 0; border: 0; font-size: 1.2rem; font-weight: 600; line-height: 1.35; }
+.result p { margin: 0 0 0.5rem; }
+.result-fig { margin: 0; }
+/* Paper figures have white backgrounds, so they keep a white frame in dark mode too */
+.result-fig img { display: block; width: 100%; max-height: 22rem; object-fit: contain; padding: 0.5rem; border: 1px solid var(--rule); border-radius: 0.4rem; background: #ffffff; }
+.result-fig figcaption { margin-top: 0.4rem; color: var(--muted); font-size: 0.85rem; }
+
+/* Schematic figures: inline SVG that follows the page colors */
+.fig { margin: 0; }
+.fig svg { display: block; width: 100%; height: auto; }
+.fig-page { max-width: 28rem; margin: 1.5rem auto 0; }
+.fig figcaption { margin-top: 0.5rem; color: var(--muted); font-size: 0.85rem; line-height: 1.4; }
+.fig text { fill: var(--text); font-size: 12px; }
+.fig .soft { fill: var(--muted); }
+.fig .pebble { fill: var(--muted); }
+.fig .axis { fill: none; stroke: var(--muted); stroke-width: 1.2; }
+.fig .ref { fill: none; stroke: var(--muted); stroke-width: 1.2; stroke-dasharray: 4 4; }
+.fig .trend { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
+.fig .shade { fill: var(--accent); opacity: 0.13; }
+.fig .flow { fill: none; stroke: var(--accent); stroke-width: 5; }
+.fig .flow-head { fill: var(--accent); }
+
+.contact { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 1rem 2.5rem; align-items: start; }
+.contact p:first-child { margin-top: 0; }
 
 .dated { margin: 0; padding: 0; list-style: none; }
 .dated li { display: grid; grid-template-columns: 5.5rem 1fr; gap: 0 1rem; margin-bottom: 0.7rem; }
@@ -139,16 +191,8 @@ main { max-width: 46rem; margin: 0 auto; padding: 3rem 2.5rem 2rem; }
 .pub-title { font-weight: 600; }
 .pub-authors, .pub-venue { color: var(--muted); font-size: 0.95rem; }
 .pub-authors strong { color: var(--text); font-weight: 600; }
-.tag {
-  display: inline-block;
-  margin-left: 0.4rem;
-  padding: 0 0.45rem;
-  border-radius: 0.25rem;
-  background: var(--tag-bg);
-  color: var(--text);
-  font-size: 0.78rem;
-  vertical-align: 0.08em;
-}
+.pub-summary { display: block; margin-top: 0.2rem; }
+.pub-view[hidden] { display: none; }
 
 .filter { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.5rem 0 0; }
 .filter[hidden] { display: none; }
@@ -229,7 +273,9 @@ footer { max-width: 46rem; margin: 0 auto; padding: 1rem 2.5rem 2.5rem; color: v
   main { padding: 2rem 16px 1.5rem; }
   footer { padding: 1rem 16px 2rem; }
   .home-name { font-size: 2.1rem; }
+  .home-role { display: block; }
+  .feature, .card { padding: 1rem; }
   .lede { font-size: 1.2rem; }
-  .dated li { grid-template-columns: 1fr; }
+  .dated li, .result { grid-template-columns: 1fr; }
   .contact-form { grid-template-columns: 1fr; padding: 1rem; }
 }

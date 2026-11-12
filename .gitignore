@@ -5,3 +5,6 @@
 *.pdf
 theme.png
 myportrait.jpg
+
+# Local backup copies of earlier drafts, for side-by-side comparison only
+_backup/

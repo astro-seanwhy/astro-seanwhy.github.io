@@ -1,0 +1,12 @@
+<svg viewBox="0 0 360 210" role="img" aria-label="Schematic of the volatility trend: refractory elements are as abundant in Earth as in the Sun, and volatile elements are increasingly depleted.">
+  <path class="shade" d="M170 55H330V150Z"/>
+  <path class="axis" d="M52 22V165H340"/>
+  <path class="ref" d="M52 55H340"/>
+  <path class="trend" d="M60 55H170L330 150"/>
+  <text class="soft" x="338" y="47" text-anchor="end">same as the Sun</text>
+  <text x="286" y="82" text-anchor="middle">depleted</text>
+  <text x="112" y="183" text-anchor="middle">refractory elements</text>
+  <text x="272" y="183" text-anchor="middle">volatile elements</text>
+  <text class="soft" x="196" y="203" text-anchor="middle">decreasing condensation temperature →</text>
+  <text class="soft" transform="translate(30 94) rotate(-90)" text-anchor="middle">Earth ÷ Sun abundance</text>
+</svg>

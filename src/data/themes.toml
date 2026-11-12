@@ -1,0 +1,39 @@
+# Research themes, in the order shown. After a change, run: python3 src/build.py
+#
+# Fields:
+#   key       Used in the "themes" field of src/data/publications.toml.
+#   title, subtitle
+#   page      The theme's own page. A theme with a page shows as a card on Home and Research.
+#   image     Figure in assets/themes/, shown on the card and on the theme's page.
+#   alt       Description of the figure for screen readers.
+#   section   Instead of a page: the theme lists every publication of this section, and shows
+#             only in the Themes view of the Publications page.
+
+[[theme]]
+key = "star-planet"
+title = "Star–planet chemical connection"
+subtitle = "Volatile depletion and chemical fractionation"
+page = "research/volatile-depletion/index.html"
+image = "assets/themes/star-planet.jpg"
+alt = "Schematic of devolatilization: the planet-to-star abundance ratio against elemental volatility. Stars define a flat line at 1.0; rocky worlds match it for refractory elements and fall increasingly below it for moderately volatile elements."
+
+[[theme]]
+key = "interiors"
+title = "Rocky exoplanet interiors and atmospheres"
+subtitle = "Observation-constrained theoretical modelling"
+page = "research/rocky-exoplanet-interiors/index.html"
+image = "assets/themes/interiors.jpg"
+alt = "Diagram: host stellar abundances and planet formation set the planet bulk composition, which, together with planet mass–radius constraints and other available constraints, informs exoplanetary interiors and atmospheres."
+
+[[theme]]
+key = "habitability"
+title = "Habitability and origin of life"
+subtitle = "Are we alone?"
+page = "research/habitability-origin-of-life/index.html"
+image = "assets/themes/habitability.jpg"
+alt = "Diagram: chemical ingredients, free energy (disequilibrium), solvents such as H2O, NH3 or HCONH2, and physio-chemical conditions overlap at habitability and origin of life."
+
+[[theme]]
+key = "geophysics"
+title = "Earlier work in geophysics"
+section = "geophysics"

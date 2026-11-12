@@ -1,0 +1,16 @@
+<svg viewBox="0 -18 380 222" role="img" aria-label="Schematic: the measured composition of a host star, after devolatilization, gives a rocky planet's core, mantle and early atmosphere.">
+  <circle cx="62" cy="88" r="34" fill="#f2a65a"/>
+  <path class="flow" d="M112 88H196"/>
+  <path class="flow-head" d="M196 79L214 88L196 97Z"/>
+  <circle class="ref" cx="275" cy="88" r="51"/>
+  <circle cx="275" cy="88" r="42" fill="#c98a5e"/>
+  <circle cx="275" cy="88" r="19" fill="#5c6170"/>
+  <text x="275" y="92" text-anchor="middle" style="fill:#fff">core</text>
+  <text x="275" y="62" text-anchor="middle" style="fill:#1c1e26">mantle</text>
+  <text class="soft" x="275" y="27" text-anchor="middle">early atmosphere</text>
+  <text class="soft" x="163" y="74" text-anchor="middle">devolatilization</text>
+  <text x="62" y="146" text-anchor="middle">Host star</text>
+  <text class="soft" x="62" y="163" text-anchor="middle">measured abundances</text>
+  <text x="275" y="163" text-anchor="middle">Rocky planet</text>
+  <text class="soft" x="275" y="180" text-anchor="middle">interior structure and mineralogy</text>
+</svg>
