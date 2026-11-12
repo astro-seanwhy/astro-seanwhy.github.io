@@ -142,6 +142,32 @@ summary = "Provides concordance estimates, with uncertainties, of the elemental 
 
 [[pub]]
 section = "research"
+authors = "Y. Reinarz, L. Acuña-Aguirre, H. S. Wang"
+year = 2026
+title = "The compositional link between rocky exoplanets and their host stars is consistent with Earth-like devolatilization"
+venue = "Astronomy & Astrophysics, accepted; arXiv:2611.12581"
+arxiv = "2611.12581"
+themes = ["star-planet", "interiors"]
+summary = "Interior structure retrievals of 14 rocky exoplanets with two independent models find that 8 present an Earth-like devolatilization trend relative to their host stars, while only one shows a 1:1 relationship between planetary and stellar abundances."
+figure = "assets/pubs/reinarz-2026-devolatilization.jpg"
+figure_alt = "Fourteen panels, one per planet, of planet-to-star abundance ratio against condensation temperature for S, O, Si, Mg and Fe, with the fitted devolatilization trends and Earth's trend for comparison."
+figure_note = "Fig. 7 of the paper (arXiv version). CC BY 4.0."
+
+[[pub]]
+section = "research"
+authors = "B. Bitsch, F. Liu, H. S. Wang"
+year = 2026
+title = "Diversity of planetary origins and compositions traced by stellar abundance differences of co-natal star systems"
+venue = "Astronomy & Astrophysics, accepted; arXiv:2610.32833"
+arxiv = "2610.32833"
+themes = ["star-planet"]
+summary = "Abundance differences between co-natal stars can be explained by the ingestion of planets whose compositions depend on where they formed, interior or exterior to the water and carbon evaporation fronts."
+figure = "assets/pubs/bitsch-2026-conatal-stars.jpg"
+figure_alt = "Measured abundance differences of C, O, S, Si, Fe and Mg in co-natal stellar pair 69, compared with models of one star ingesting planets formed at 100 K, 300 K and 720 K."
+figure_note = "Fig. 1 (left) of the paper (arXiv version)."
+
+[[pub]]
+section = "research"
 authors = "M. Sastre, T. Lichtenberg, L. Dang, A. Piette, H. S. Wang, M. López-Morales, et al."
 year = 2026
 title = "Thermal Evolution of Lava Planets Across System Ages: Predictions for Hell of a Survey"
