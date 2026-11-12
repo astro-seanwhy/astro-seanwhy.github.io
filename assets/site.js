@@ -36,3 +36,18 @@ if (filter) {
   };
   buttons.forEach((b) => b.addEventListener('click', () => show(b.dataset.filter)));
 }
+
+// Contact form: the browser keeps typed text when a visitor comes back with the Back button,
+// so a form that was sent is cleared on return. A draft that was not sent is left alone.
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+  const sentKey = 'contact-form-sent';
+  contactForm.addEventListener('submit', () => {
+    try { sessionStorage.setItem(sentKey, '1'); } catch (e) { /* storage blocked: nothing to remember */ }
+  });
+  window.addEventListener('pageshow', () => {
+    let sent = false;
+    try { sent = sessionStorage.getItem(sentKey) === '1'; sessionStorage.removeItem(sentKey); } catch (e) { /* storage blocked */ }
+    if (sent) contactForm.reset();
+  });
+}
