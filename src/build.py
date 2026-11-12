@@ -231,7 +231,7 @@ def form_values():
         return {
             "form_action": f' action="https://formspree.io/f/{esc(FORMSPREE_ID)}"',
             "form_disabled": "",
-            "form_note": "Messages are delivered through Formspree, a third-party form service.",
+            "form_note": "",
         }
     return {
         "form_action": "",
