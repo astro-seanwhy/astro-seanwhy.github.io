@@ -17,7 +17,7 @@ HOME_DESC = (
 
 ## ID of the Contact form from the Formspree dashboard (the end of formspree.io/f/...).
 ## While empty, the form shows but cannot send.
-FORMSPREE_ID = ""
+FORMSPREE_ID = "xvkagrqa"
 
 ## Top-level navigation: (label, path)
 NAV = [
