@@ -2,6 +2,7 @@
 """Generate the site's HTML pages from src/. Run from anywhere: python3 src/build.py"""
 
 import html
+import json
 import re
 import tomllib
 from pathlib import Path
@@ -10,6 +11,7 @@ SRC = Path(__file__).resolve().parent
 ROOT = SRC.parent
 
 SITE_NAME = "Haiyang S. Wang"
+SITE_URL = "https://astro-seanwhy.github.io/"
 HOME_DESC = (
     "Haiyang S. Wang is an Assistant Professor of Planetary Science at the Globe Institute, "
     "University of Copenhagen, studying how planetary systems form and evolve."
@@ -18,6 +20,11 @@ HOME_DESC = (
 ## ID of the Contact form from the Formspree dashboard (the end of formspree.io/f/...).
 ## While empty, the form shows but cannot send.
 FORMSPREE_ID = "xvkagrqa"
+
+## Ownership codes from Google Search Console and Bing Webmaster Tools ("HTML tag" method):
+## paste only the content="..." value. While empty, no tag is added.
+GOOGLE_VERIFICATION = ""
+BING_VERIFICATION = ""
 
 ## Top-level navigation: (label, path)
 NAV = [
@@ -250,6 +257,54 @@ def form_values():
 
 ###---- Page assembly ----###
 
+def page_url(out):
+    ## Address search engines should use for a page: the folder, without index.html
+    return SITE_URL + out.removesuffix("index.html")
+
+
+def head_extras(out, is_home):
+    tags = [f'<link rel="canonical" href="{page_url(out)}">']
+    if is_home:
+        if GOOGLE_VERIFICATION:
+            tags.append(f'<meta name="google-site-verification" content="{esc(GOOGLE_VERIFICATION)}">')
+        if BING_VERIFICATION:
+            tags.append(f'<meta name="msvalidate.01" content="{esc(BING_VERIFICATION)}">')
+        tags.append(f'<script type="application/ld+json">{json.dumps(PERSON, ensure_ascii=False)}</script>')
+    return "\n".join(tags)
+
+
+## Who the site is about, in the schema.org form search engines read
+PERSON = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Haiyang S. Wang",
+    "jobTitle": "Assistant Professor of Planetary Science",
+    "affiliation": {"@type": "Organization", "name": "Globe Institute, University of Copenhagen"},
+    "url": SITE_URL,
+    "image": SITE_URL + "assets/portrait.jpg",
+    "sameAs": [
+        "https://orcid.org/0000-0001-8618-3343",
+        "https://scholar.google.com/citations?user=fiT7YvQAAAAJ",
+        "https://researchprofiles.ku.dk/en/persons/haiyang-wang",
+        "https://github.com/astro-seanwhy",
+        "https://www.linkedin.com/in/haiyang-wang-a63403b8",
+    ],
+}
+
+
+def write_crawler_files():
+    ## sitemap.xml lists every page; robots.txt points to it and keeps the source fragments out of search
+    urls = "\n".join(f"  <url><loc>{esc(page_url(out))}</loc></url>" for out, *_ in PAGES)
+    (ROOT / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls + "\n</urlset>\n",
+        encoding="utf-8",
+    )
+    (ROOT / "robots.txt").write_text(
+        f"User-agent: *\nDisallow: /src/\n\nSitemap: {SITE_URL}sitemap.xml\n", encoding="utf-8"
+    )
+
+
 def relative_root(path):
     return "../" * path.count("/")
 
@@ -291,6 +346,7 @@ def render_page(template, out, title, fragment, nav_label, pubs, talks, themes):
     values = {
         "title": esc(SITE_NAME if is_home else f"{title} | {SITE_NAME}"),
         "description": esc(HOME_DESC if is_home else f"{title}: {SITE_NAME}, planetary science, University of Copenhagen."),
+        "head_extras": head_extras(out, is_home),
         "nav": render_nav(nav_label, root),
         "main": main.rstrip(),
         "wide": " wide" if out in WIDE else "",
@@ -312,6 +368,7 @@ def main():
         path = ROOT / out
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(render_page(template, out, title, fragment, nav_label, pubs, talks, themes), encoding="utf-8")
+    write_crawler_files()
     ## Tells GitHub Pages to serve these files as they are
     (ROOT / ".nojekyll").touch()
     print(f"Built {len(PAGES)} pages, {len(pubs)} publication entries, {len(talks)} talks.")
