@@ -28,6 +28,10 @@ python3 src/build.py
 
 Do not edit the generated `index.html` files directly, because the next build overwrites them.
 
+## Publishing
+
+Every change to `main`, whether pushed from a computer or committed on github.com, is built and published by GitHub Actions (`.github/workflows/pages.yml`). Edits made on github.com therefore go live about a minute later without a local build. The run's progress is under the repository's Actions tab.
+
 ## Previewing
 
 ```bash

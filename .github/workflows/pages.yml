@@ -1,0 +1,47 @@
+# Builds the site with src/build.py and publishes it with GitHub Pages,
+# after every change to main (from this computer or from an edit on github.com).
+# Only the finished pages, images and crawler files are published; src/ and the README are not.
+# The steps are GitHub's own, pinned to exact versions; the comment after each gives the version.
+
+name: Build and publish site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+## One publish at a time; a newer change waits for the one before it
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - name: Build the pages
+        run: python3 src/build.py
+      - name: Collect the files to publish
+        run: |
+          mkdir _site
+          cp -R index.html research publications talks cv assets robots.txt sitemap.xml _site/
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
