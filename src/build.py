@@ -23,7 +23,7 @@ FORMSPREE_ID = "xvkagrqa"
 
 ## Ownership codes from Google Search Console and Bing Webmaster Tools ("HTML tag" method):
 ## paste only the content="..." value. While empty, no tag is added.
-GOOGLE_VERIFICATION = ""
+GOOGLE_VERIFICATION = "kwxSSDPEgZ5LHLNozlOZsLRxXdIu0yxogI4u03dxaxs"
 BING_VERIFICATION = ""
 
 ## Top-level navigation: (label, path)
